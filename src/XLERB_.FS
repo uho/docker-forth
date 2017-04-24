@@ -4,5 +4,5 @@ CR .( hello )
 
 TEST  3 4 + .
 
-CR ." done" 
+CR .( done)
 CR
