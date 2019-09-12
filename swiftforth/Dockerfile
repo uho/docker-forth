@@ -5,8 +5,8 @@ RUN apt-get update -q \
      apt-get install -qy wget libc6-i386 lib32stdc++6 \
   && apt-get clean \
   && rm -rf /var/lib/apt
-RUN wget http://dl.forth.com/downloads/SwiftForth-linux-osx-eval.tgz \
-  && tar xfz SwiftForth-linux-osx-eval.tgz
+RUN wget http://dl.forth.com/downloads/SwiftForth-linux-macos-eval.tgz \
+  && tar xfz SwiftForth-linux-macos-eval.tgz
 RUN mkdir /src
 VOLUME /src
 WORKDIR /src
