@@ -1,0 +1,3673 @@
+diff -r -u ../gforth-0.6.2/engine/prim.i ./engine/prim.i
+--- ../gforth-0.6.2/engine/prim.i	2003-08-24 11:17:22.000000000 +0200
++++ ./engine/prim.i	2008-10-02 14:50:33.000000000 +0200
+@@ -694,9 +694,9 @@
+ INC_IP(1);
+ sp += 1;
+ {
+-#line 338 "./prim"
++#line 332 "./prim"
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -707,19 +707,19 @@
+ NEXT_P1;
+ IF_spTOS(spTOS = sp[0]);
+ 
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ if (f==0) {
+-#line 337
++#line 331
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ JUMP(a_target);
+-#line 337
++#line 331
+ #else
+-#line 337
++#line 331
+ SET_IP((Xt *)a_target);
+-#line 337
++#line 331
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -730,13 +730,13 @@
+ NEXT_P1;
+ IF_spTOS(spTOS = sp[0]);
+  NEXT_P2;
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ }
+-#line 337
++#line 331
+ SUPER_CONTINUE;
+-#line 337
++#line 331
+ #line 741 "prim.i"
+ }
+ SUPER_END;
+@@ -776,9 +776,9 @@
+ INC_IP(2);
+ sp += 1;
+ {
+-#line 338 "./prim"
++#line 332 "./prim"
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -789,21 +789,21 @@
+ NEXT_P1;
+ IF_spTOS(spTOS = sp[0]);
+ 
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ if (f==0) {
+-#line 337
++#line 331
+ 	lp += nlocals;
+-#line 337
++#line 331
+ #ifdef NO_IP
+-#line 337
++#line 331
+ JUMP(a_target);
+-#line 337
++#line 331
+ #else
+-#line 337
++#line 331
+ SET_IP((Xt *)a_target);
+-#line 337
++#line 331
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -814,13 +814,13 @@
+ NEXT_P1;
+ IF_spTOS(spTOS = sp[0]);
+  NEXT_P2;
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ }
+-#line 337
++#line 331
+ SUPER_CONTINUE;
+-#line 337
++#line 331
+ #line 825 "prim.i"
+ }
+ SUPER_END;
+@@ -971,11 +971,11 @@
+ #endif
+ INC_IP(1);
+ {
+-#line 385 "./prim"
++#line 380 "./prim"
+ n2=n1-1;
+-#line 384
++#line 379
+ 	#ifdef NO_IP
+-#line 384
++#line 379
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -987,19 +987,19 @@
+ NEXT_P1;
+ vm_n2Cell(n2,rpTOS);
+ 
+-#line 384
++#line 379
+ #endif
+-#line 384
++#line 379
+ if (n1) {
+-#line 384
++#line 379
+ 	#ifdef NO_IP
+-#line 384
++#line 379
+ JUMP(a_target);
+-#line 384
++#line 379
+ #else
+-#line 384
++#line 379
+ SET_IP((Xt *)a_target);
+-#line 384
++#line 379
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1011,13 +1011,13 @@
+ NEXT_P1;
+ vm_n2Cell(n2,rpTOS);
+  NEXT_P2;
+-#line 384
++#line 379
+ #endif
+-#line 384
++#line 379
+ }
+-#line 384
++#line 379
+ SUPER_CONTINUE;
+-#line 384
++#line 379
+ #line 1022 "prim.i"
+ }
+ SUPER_END;
+@@ -1058,11 +1058,11 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 385 "./prim"
++#line 380 "./prim"
+ n2=n1-1;
+-#line 384
++#line 379
+ 	#ifdef NO_IP
+-#line 384
++#line 379
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1074,21 +1074,21 @@
+ NEXT_P1;
+ vm_n2Cell(n2,rpTOS);
+ 
+-#line 384
++#line 379
+ #endif
+-#line 384
++#line 379
+ if (n1) {
+-#line 384
++#line 379
+ 	lp += nlocals;
+-#line 384
++#line 379
+ #ifdef NO_IP
+-#line 384
++#line 379
+ JUMP(a_target);
+-#line 384
++#line 379
+ #else
+-#line 384
++#line 379
+ SET_IP((Xt *)a_target);
+-#line 384
++#line 379
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1100,13 +1100,13 @@
+ NEXT_P1;
+ vm_n2Cell(n2,rpTOS);
+  NEXT_P2;
+-#line 384
++#line 379
+ #endif
+-#line 384
++#line 379
+ }
+-#line 384
++#line 379
+ SUPER_CONTINUE;
+-#line 384
++#line 379
+ #line 1111 "prim.i"
+ }
+ SUPER_END;
+@@ -1147,11 +1147,11 @@
+ #endif
+ INC_IP(1);
+ {
+-#line 393 "./prim"
++#line 387 "./prim"
+ n2=n1+1;
+-#line 392
++#line 386
+ 	#ifdef NO_IP
+-#line 392
++#line 386
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1163,19 +1163,19 @@
+ NEXT_P1;
+ vm_n2Cell(n2,rpTOS);
+ 
+-#line 392
++#line 386
+ #endif
+-#line 392
++#line 386
+ if (n2 != nlimit) {
+-#line 392
++#line 386
+ 	#ifdef NO_IP
+-#line 392
++#line 386
+ JUMP(a_target);
+-#line 392
++#line 386
+ #else
+-#line 392
++#line 386
+ SET_IP((Xt *)a_target);
+-#line 392
++#line 386
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1187,13 +1187,13 @@
+ NEXT_P1;
+ vm_n2Cell(n2,rpTOS);
+  NEXT_P2;
+-#line 392
++#line 386
+ #endif
+-#line 392
++#line 386
+ }
+-#line 392
++#line 386
+ SUPER_CONTINUE;
+-#line 392
++#line 386
+ #line 1198 "prim.i"
+ }
+ SUPER_END;
+@@ -1237,11 +1237,11 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 393 "./prim"
++#line 387 "./prim"
+ n2=n1+1;
+-#line 392
++#line 386
+ 	#ifdef NO_IP
+-#line 392
++#line 386
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1253,21 +1253,21 @@
+ NEXT_P1;
+ vm_n2Cell(n2,rpTOS);
+ 
+-#line 392
++#line 386
+ #endif
+-#line 392
++#line 386
+ if (n2 != nlimit) {
+-#line 392
++#line 386
+ 	lp += nlocals;
+-#line 392
++#line 386
+ #ifdef NO_IP
+-#line 392
++#line 386
+ JUMP(a_target);
+-#line 392
++#line 386
+ #else
+-#line 392
++#line 386
+ SET_IP((Xt *)a_target);
+-#line 392
++#line 386
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1279,13 +1279,13 @@
+ NEXT_P1;
+ vm_n2Cell(n2,rpTOS);
+  NEXT_P2;
+-#line 392
++#line 386
+ #endif
+-#line 392
++#line 386
+ }
+-#line 392
++#line 386
+ SUPER_CONTINUE;
+-#line 392
++#line 386
+ #line 1290 "prim.i"
+ }
+ SUPER_END;
+@@ -1330,19 +1330,19 @@
+ INC_IP(1);
+ sp += 1;
+ {
+-#line 409 "./prim"
++#line 395 "./prim"
+ /* !! check this thoroughly */
+-#line 408
++#line 394
+ /* sign bit manipulation and test: (x^y)<0 is equivalent to (x<0) != (y<0) */
+-#line 408
++#line 394
+ /* dependent upon two's complement arithmetic */
+-#line 408
++#line 394
+ Cell olddiff = n1-nlimit;
+-#line 408
++#line 394
+ n2=n1+n;	
+-#line 408
++#line 394
+ 	#ifdef NO_IP
+-#line 408
++#line 394
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1355,21 +1355,21 @@
+ vm_n2Cell(n2,rpTOS);
+ IF_spTOS(spTOS = sp[0]);
+ 
+-#line 408
++#line 394
+ #endif
+-#line 408
++#line 394
+ if ((olddiff^(olddiff+n))>=0   /* the limit is not crossed */
+-#line 408
++#line 394
+     || (olddiff^n)>=0          /* it is a wrap-around effect */) {
+-#line 408
++#line 394
+ 	#ifdef NO_IP
+-#line 408
++#line 394
+ JUMP(a_target);
+-#line 408
++#line 394
+ #else
+-#line 408
++#line 394
+ SET_IP((Xt *)a_target);
+-#line 408
++#line 394
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1382,13 +1382,13 @@
+ vm_n2Cell(n2,rpTOS);
+ IF_spTOS(spTOS = sp[0]);
+  NEXT_P2;
+-#line 408
++#line 394
+ #endif
+-#line 408
++#line 394
+ }
+-#line 408
++#line 394
+ SUPER_CONTINUE;
+-#line 408
++#line 394
+ #line 1393 "prim.i"
+ }
+ SUPER_END;
+@@ -1437,19 +1437,19 @@
+ INC_IP(2);
+ sp += 1;
+ {
+-#line 409 "./prim"
++#line 395 "./prim"
+ /* !! check this thoroughly */
+-#line 408
++#line 394
+ /* sign bit manipulation and test: (x^y)<0 is equivalent to (x<0) != (y<0) */
+-#line 408
++#line 394
+ /* dependent upon two's complement arithmetic */
+-#line 408
++#line 394
+ Cell olddiff = n1-nlimit;
+-#line 408
++#line 394
+ n2=n1+n;	
+-#line 408
++#line 394
+ 	#ifdef NO_IP
+-#line 408
++#line 394
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1462,23 +1462,23 @@
+ vm_n2Cell(n2,rpTOS);
+ IF_spTOS(spTOS = sp[0]);
+ 
+-#line 408
++#line 394
+ #endif
+-#line 408
++#line 394
+ if ((olddiff^(olddiff+n))>=0   /* the limit is not crossed */
+-#line 408
++#line 394
+     || (olddiff^n)>=0          /* it is a wrap-around effect */) {
+-#line 408
++#line 394
+ 	lp += nlocals;
+-#line 408
++#line 394
+ #ifdef NO_IP
+-#line 408
++#line 394
+ JUMP(a_target);
+-#line 408
++#line 394
+ #else
+-#line 408
++#line 394
+ SET_IP((Xt *)a_target);
+-#line 408
++#line 394
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1491,13 +1491,13 @@
+ vm_n2Cell(n2,rpTOS);
+ IF_spTOS(spTOS = sp[0]);
+  NEXT_P2;
+-#line 408
++#line 394
+ #endif
+-#line 408
++#line 394
+ }
+-#line 408
++#line 394
+ SUPER_CONTINUE;
+-#line 408
++#line 394
+ #line 1502 "prim.i"
+ }
+ SUPER_END;
+@@ -1545,13 +1545,13 @@
+ INC_IP(1);
+ sp += 1;
+ {
+-#line 417 "./prim"
++#line 413 "./prim"
+ UCell olddiff = n1-nlimit;
+-#line 416
++#line 412
+ n2=n1-u;
+-#line 416
++#line 412
+ 	#ifdef NO_IP
+-#line 416
++#line 412
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1564,19 +1564,19 @@
+ vm_n2Cell(n2,rpTOS);
+ IF_spTOS(spTOS = sp[0]);
+ 
+-#line 416
++#line 412
+ #endif
+-#line 416
++#line 412
+ if (olddiff>u) {
+-#line 416
++#line 412
+ 	#ifdef NO_IP
+-#line 416
++#line 412
+ JUMP(a_target);
+-#line 416
++#line 412
+ #else
+-#line 416
++#line 412
+ SET_IP((Xt *)a_target);
+-#line 416
++#line 412
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1589,13 +1589,13 @@
+ vm_n2Cell(n2,rpTOS);
+ IF_spTOS(spTOS = sp[0]);
+  NEXT_P2;
+-#line 416
++#line 412
+ #endif
+-#line 416
++#line 412
+ }
+-#line 416
++#line 412
+ SUPER_CONTINUE;
+-#line 416
++#line 412
+ #line 1600 "prim.i"
+ }
+ SUPER_END;
+@@ -1644,13 +1644,13 @@
+ INC_IP(2);
+ sp += 1;
+ {
+-#line 417 "./prim"
++#line 413 "./prim"
+ UCell olddiff = n1-nlimit;
+-#line 416
++#line 412
+ n2=n1-u;
+-#line 416
++#line 412
+ 	#ifdef NO_IP
+-#line 416
++#line 412
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1663,21 +1663,21 @@
+ vm_n2Cell(n2,rpTOS);
+ IF_spTOS(spTOS = sp[0]);
+ 
+-#line 416
++#line 412
+ #endif
+-#line 416
++#line 412
+ if (olddiff>u) {
+-#line 416
++#line 412
+ 	lp += nlocals;
+-#line 416
++#line 412
+ #ifdef NO_IP
+-#line 416
++#line 412
+ JUMP(a_target);
+-#line 416
++#line 412
+ #else
+-#line 416
++#line 412
+ SET_IP((Xt *)a_target);
+-#line 416
++#line 412
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1690,13 +1690,13 @@
+ vm_n2Cell(n2,rpTOS);
+ IF_spTOS(spTOS = sp[0]);
+  NEXT_P2;
+-#line 416
++#line 412
+ #endif
+-#line 416
++#line 412
+ }
+-#line 416
++#line 412
+ SUPER_CONTINUE;
+-#line 416
++#line 412
+ #line 1701 "prim.i"
+ }
+ SUPER_END;
+@@ -1744,25 +1744,25 @@
+ INC_IP(1);
+ sp += 1;
+ {
+-#line 432 "./prim"
++#line 419 "./prim"
+ /* !! check this thoroughly */
+-#line 431
++#line 418
+ Cell diff = n1-nlimit;
+-#line 431
++#line 418
+ Cell newdiff = diff+n;
+-#line 431
++#line 418
+ if (n<0) {
+-#line 431
++#line 418
+     diff = -diff;
+-#line 431
++#line 418
+     newdiff = -newdiff;
+-#line 431
++#line 418
+ }
+-#line 431
++#line 418
+ n2=n1+n;
+-#line 431
++#line 418
+ 	#ifdef NO_IP
+-#line 431
++#line 418
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1775,19 +1775,19 @@
+ vm_n2Cell(n2,rpTOS);
+ IF_spTOS(spTOS = sp[0]);
+ 
+-#line 431
++#line 418
+ #endif
+-#line 431
++#line 418
+ if (diff>=0 || newdiff<0) {
+-#line 431
++#line 418
+ 	#ifdef NO_IP
+-#line 431
++#line 418
+ JUMP(a_target);
+-#line 431
++#line 418
+ #else
+-#line 431
++#line 418
+ SET_IP((Xt *)a_target);
+-#line 431
++#line 418
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1800,13 +1800,13 @@
+ vm_n2Cell(n2,rpTOS);
+ IF_spTOS(spTOS = sp[0]);
+  NEXT_P2;
+-#line 431
++#line 418
+ #endif
+-#line 431
++#line 418
+ }
+-#line 431
++#line 418
+ SUPER_CONTINUE;
+-#line 431
++#line 418
+ #line 1811 "prim.i"
+ }
+ SUPER_END;
+@@ -1857,25 +1857,25 @@
+ INC_IP(2);
+ sp += 1;
+ {
+-#line 432 "./prim"
++#line 419 "./prim"
+ /* !! check this thoroughly */
+-#line 431
++#line 418
+ Cell diff = n1-nlimit;
+-#line 431
++#line 418
+ Cell newdiff = diff+n;
+-#line 431
++#line 418
+ if (n<0) {
+-#line 431
++#line 418
+     diff = -diff;
+-#line 431
++#line 418
+     newdiff = -newdiff;
+-#line 431
++#line 418
+ }
+-#line 431
++#line 418
+ n2=n1+n;
+-#line 431
++#line 418
+ 	#ifdef NO_IP
+-#line 431
++#line 418
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1888,21 +1888,21 @@
+ vm_n2Cell(n2,rpTOS);
+ IF_spTOS(spTOS = sp[0]);
+ 
+-#line 431
++#line 418
+ #endif
+-#line 431
++#line 418
+ if (diff>=0 || newdiff<0) {
+-#line 431
++#line 418
+ 	lp += nlocals;
+-#line 431
++#line 418
+ #ifdef NO_IP
+-#line 431
++#line 418
+ JUMP(a_target);
+-#line 431
++#line 418
+ #else
+-#line 431
++#line 418
+ SET_IP((Xt *)a_target);
+-#line 431
++#line 418
+ SUPER_END;
+ 
+ #ifdef VM_DEBUG
+@@ -1915,13 +1915,13 @@
+ vm_n2Cell(n2,rpTOS);
+ IF_spTOS(spTOS = sp[0]);
+  NEXT_P2;
+-#line 431
++#line 418
+ #endif
+-#line 431
++#line 418
+ }
+-#line 431
++#line 418
+ SUPER_CONTINUE;
+-#line 431
++#line 418
+ #line 1926 "prim.i"
+ }
+ SUPER_END;
+@@ -12746,8 +12746,12 @@
+ sp += 2;
+ {
+ #line 2309 "./prim"
++#ifdef BUGGY_LONG_LONG
++av_longlong(alist, d.lo);
++#else
+ av_longlong(alist, d);
+-#line 12751 "prim.i"
++#endif
++#line 12755 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -12776,9 +12780,9 @@
+ #endif
+ sp += 1;
+ {
+-#line 2312 "./prim"
++#line 2316 "./prim"
+ av_ptr(alist, void*, c_addr);
+-#line 12782 "prim.i"
++#line 12786 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -12807,9 +12811,9 @@
+ #endif
+ rp += 1;
+ {
+-#line 2315 "./prim"
++#line 2319 "./prim"
+ av_int(alist, w);
+-#line 12813 "prim.i"
++#line 12817 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -12834,11 +12838,11 @@
+ }
+ #endif
+ {
+-#line 2318 "./prim"
++#line 2322 "./prim"
+ float r = *(Float*)lp;
+ lp += sizeof(Float);
+ av_float(alist, r);
+-#line 12842 "prim.i"
++#line 12846 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -12862,11 +12866,11 @@
+ }
+ #endif
+ {
+-#line 2323 "./prim"
++#line 2327 "./prim"
+ double r = *(Float*)lp;
+ lp += sizeof(Float);
+ av_double(alist, r);
+-#line 12870 "prim.i"
++#line 12874 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -12894,9 +12898,13 @@
+ #endif
+ rp += 2;
+ {
+-#line 2328 "./prim"
++#line 2332 "./prim"
++#ifdef BUGGY_LONG_LONG
++av_longlong(alist, d.lo);
++#else
+ av_longlong(alist, d);
+-#line 12900 "prim.i"
++#endif
++#line 12908 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -12925,9 +12933,9 @@
+ #endif
+ rp += 1;
+ {
+-#line 2331 "./prim"
++#line 2339 "./prim"
+ av_ptr(alist, void*, c_addr);
+-#line 12931 "prim.i"
++#line 12939 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -12952,11 +12960,11 @@
+ }
+ #endif
+ {
+-#line 2334 "./prim"
++#line 2342 "./prim"
+ SAVE_REGS
+ av_call(alist);
+ REST_REGS
+-#line 12960 "prim.i"
++#line 12968 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -12983,12 +12991,12 @@
+ #endif
+ sp += -1;
+ {
+-#line 2339 "./prim"
++#line 2347 "./prim"
+ SAVE_REGS
+ av_call(alist);
+ REST_REGS
+ w = irv;
+-#line 12992 "prim.i"
++#line 13000 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13017,12 +13025,12 @@
+ #endif
+ fp += -1;
+ {
+-#line 2345 "./prim"
++#line 2353 "./prim"
+ SAVE_REGS
+ av_call(alist);
+ REST_REGS
+ r = frv;
+-#line 13026 "prim.i"
++#line 13034 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13051,12 +13059,12 @@
+ #endif
+ fp += -1;
+ {
+-#line 2351 "./prim"
++#line 2359 "./prim"
+ SAVE_REGS
+ av_call(alist);
+ REST_REGS
+ r = drv;
+-#line 13060 "prim.i"
++#line 13068 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13085,12 +13093,17 @@
+ #endif
+ sp += -2;
+ {
+-#line 2357 "./prim"
++#line 2365 "./prim"
+ SAVE_REGS
+ av_call(alist);
+ REST_REGS
++#ifdef BUGGY_LONG_LONG
++d.lo = llrv;
++d.hi = 0;
++#else
+ d = llrv;
+-#line 13094 "prim.i"
++#endif
++#line 13107 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13119,12 +13132,12 @@
+ #endif
+ sp += -1;
+ {
+-#line 2363 "./prim"
++#line 2376 "./prim"
+ SAVE_REGS
+ av_call(alist);
+ REST_REGS
+ c_addr = prv;
+-#line 13128 "prim.i"
++#line 13141 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13154,9 +13167,9 @@
+ }
+ #endif
+ {
+-#line 2369 "./prim"
++#line 2382 "./prim"
+ c_addr = (char *)alloc_callback(engine_callback, (Xt *)a_ip);
+-#line 13160 "prim.i"
++#line 13173 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13182,9 +13195,9 @@
+ }
+ #endif
+ {
+-#line 2372 "./prim"
++#line 2385 "./prim"
+ va_start_void(clist);
+-#line 13188 "prim.i"
++#line 13201 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13208,9 +13221,9 @@
+ }
+ #endif
+ {
+-#line 2375 "./prim"
++#line 2388 "./prim"
+ va_start_int(clist);
+-#line 13214 "prim.i"
++#line 13227 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13234,9 +13247,9 @@
+ }
+ #endif
+ {
+-#line 2378 "./prim"
++#line 2391 "./prim"
+ va_start_longlong(clist);
+-#line 13240 "prim.i"
++#line 13253 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13260,9 +13273,9 @@
+ }
+ #endif
+ {
+-#line 2381 "./prim"
++#line 2394 "./prim"
+ va_start_ptr(clist, (char *));
+-#line 13266 "prim.i"
++#line 13279 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13286,9 +13299,9 @@
+ }
+ #endif
+ {
+-#line 2384 "./prim"
++#line 2397 "./prim"
+ va_start_float(clist);
+-#line 13292 "prim.i"
++#line 13305 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13312,9 +13325,9 @@
+ }
+ #endif
+ {
+-#line 2387 "./prim"
++#line 2400 "./prim"
+ va_start_double(clist);
+-#line 13318 "prim.i"
++#line 13331 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13341,9 +13354,9 @@
+ #endif
+ sp += -1;
+ {
+-#line 2390 "./prim"
++#line 2403 "./prim"
+ w = va_arg_int(clist);
+-#line 13347 "prim.i"
++#line 13360 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13372,9 +13385,14 @@
+ #endif
+ sp += -2;
+ {
+-#line 2393 "./prim"
++#line 2406 "./prim"
++#ifdef BUGGY_LONG_LONG
++d.lo = va_arg_longlong(clist);
++d.hi = 0;
++#else
+ d = va_arg_longlong(clist);
+-#line 13378 "prim.i"
++#endif
++#line 13396 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13403,9 +13421,9 @@
+ #endif
+ sp += -1;
+ {
+-#line 2396 "./prim"
++#line 2414 "./prim"
+ c_addr = (char *)va_arg_ptr(clist,char*);
+-#line 13409 "prim.i"
++#line 13427 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13434,9 +13452,9 @@
+ #endif
+ fp += -1;
+ {
+-#line 2399 "./prim"
++#line 2417 "./prim"
+ r = va_arg_float(clist);
+-#line 13440 "prim.i"
++#line 13458 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13465,9 +13483,9 @@
+ #endif
+ fp += -1;
+ {
+-#line 2402 "./prim"
++#line 2420 "./prim"
+ r = va_arg_double(clist);
+-#line 13471 "prim.i"
++#line 13489 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13493,10 +13511,10 @@
+ }
+ #endif
+ {
+-#line 2405 "./prim"
++#line 2423 "./prim"
+ va_return_void(clist);
+ return 0;
+-#line 13500 "prim.i"
++#line 13518 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13524,10 +13542,10 @@
+ #endif
+ sp += 1;
+ {
+-#line 2409 "./prim"
++#line 2427 "./prim"
+ va_return_int(clist, w);
+ return 0;
+-#line 13531 "prim.i"
++#line 13549 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13556,10 +13574,10 @@
+ #endif
+ sp += 1;
+ {
+-#line 2413 "./prim"
++#line 2431 "./prim"
+ va_return_ptr(clist, void *, c_addr);
+ return 0;
+-#line 13563 "prim.i"
++#line 13581 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13588,10 +13606,14 @@
+ #endif
+ sp += 2;
+ {
+-#line 2417 "./prim"
++#line 2435 "./prim"
++#ifdef BUGGY_LONG_LONG
++va_return_longlong(clist, d.lo);
++#else
+ va_return_longlong(clist, d);
++#endif
+ return 0;
+-#line 13595 "prim.i"
++#line 13617 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13620,10 +13642,10 @@
+ #endif
+ fp += 1;
+ {
+-#line 2421 "./prim"
++#line 2443 "./prim"
+ va_return_float(clist, r);
+ return 0;
+-#line 13627 "prim.i"
++#line 13649 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13652,10 +13674,10 @@
+ #endif
+ fp += 1;
+ {
+-#line 2425 "./prim"
++#line 2447 "./prim"
+ va_return_double(clist, r);
+ return 0;
+-#line 13659 "prim.i"
++#line 13681 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13688,10 +13710,10 @@
+ }
+ #endif
+ {
+-#line 2463 "./prim"
++#line 2485 "./prim"
+ uret = (SYSCALL(Cell(*)())u)();
+-#line 2462
+-#line 13695 "prim.i"
++#line 2484
++#line 13717 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13725,10 +13747,10 @@
+ #endif
+ sp += 1;
+ {
+-#line 2463 "./prim"
++#line 2485 "./prim"
+ uret = (SYSCALL(Cell(*)(Cell))u)(u1);
+-#line 2462
+-#line 13732 "prim.i"
++#line 2484
++#line 13754 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13765,10 +13787,10 @@
+ #endif
+ sp += 2;
+ {
+-#line 2463 "./prim"
++#line 2485 "./prim"
+ uret = (SYSCALL(Cell(*)(Cell, Cell))u)(u1, u2);
+-#line 2462
+-#line 13772 "prim.i"
++#line 2484
++#line 13794 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13808,10 +13830,10 @@
+ #endif
+ sp += 3;
+ {
+-#line 2463 "./prim"
++#line 2485 "./prim"
+ uret = (SYSCALL(Cell(*)(Cell, Cell, Cell))u)(u1, u2, u3);
+-#line 2462
+-#line 13815 "prim.i"
++#line 2484
++#line 13837 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13854,10 +13876,10 @@
+ #endif
+ sp += 4;
+ {
+-#line 2463 "./prim"
++#line 2485 "./prim"
+ uret = (SYSCALL(Cell(*)(Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4);
+-#line 2462
+-#line 13861 "prim.i"
++#line 2484
++#line 13883 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13903,10 +13925,10 @@
+ #endif
+ sp += 5;
+ {
+-#line 2463 "./prim"
++#line 2485 "./prim"
+ uret = (SYSCALL(Cell(*)(Cell, Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4, u5);
+-#line 2462
+-#line 13910 "prim.i"
++#line 2484
++#line 13932 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -13955,10 +13977,10 @@
+ #endif
+ sp += 6;
+ {
+-#line 2463 "./prim"
++#line 2485 "./prim"
+ uret = (SYSCALL(Cell(*)(Cell, Cell, Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4, u5, u6);
+-#line 2462
+-#line 13962 "prim.i"
++#line 2484
++#line 13984 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14049,10 +14071,10 @@
+ #endif
+ sp += 20;
+ {
+-#line 2464 "./prim"
++#line 2486 "./prim"
+ uret = (SYSCALL(Cell(*)(Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11, u12, u13, u14, u15, u16, u17, u18, u19, u20);
+-#line 2463
+-#line 14056 "prim.i"
++#line 2485
++#line 14078 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14085,10 +14107,10 @@
+ sp += 1;
+ fp += -1;
+ {
+-#line 2465 "./prim"
++#line 2487 "./prim"
+ rret = (SYSCALL(Float(*)())u)();
+-#line 2464
+-#line 14092 "prim.i"
++#line 2486
++#line 14114 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14125,10 +14147,10 @@
+ sp += 2;
+ fp += -1;
+ {
+-#line 2465 "./prim"
++#line 2487 "./prim"
+ rret = (SYSCALL(Float(*)(Cell))u)(u1);
+-#line 2464
+-#line 14132 "prim.i"
++#line 2486
++#line 14154 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14168,10 +14190,10 @@
+ sp += 3;
+ fp += -1;
+ {
+-#line 2465 "./prim"
++#line 2487 "./prim"
+ rret = (SYSCALL(Float(*)(Cell, Cell))u)(u1, u2);
+-#line 2464
+-#line 14175 "prim.i"
++#line 2486
++#line 14197 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14214,10 +14236,10 @@
+ sp += 4;
+ fp += -1;
+ {
+-#line 2465 "./prim"
++#line 2487 "./prim"
+ rret = (SYSCALL(Float(*)(Cell, Cell, Cell))u)(u1, u2, u3);
+-#line 2464
+-#line 14221 "prim.i"
++#line 2486
++#line 14243 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14263,10 +14285,10 @@
+ sp += 5;
+ fp += -1;
+ {
+-#line 2465 "./prim"
++#line 2487 "./prim"
+ rret = (SYSCALL(Float(*)(Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4);
+-#line 2464
+-#line 14270 "prim.i"
++#line 2486
++#line 14292 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14315,10 +14337,10 @@
+ sp += 6;
+ fp += -1;
+ {
+-#line 2465 "./prim"
++#line 2487 "./prim"
+ rret = (SYSCALL(Float(*)(Cell, Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4, u5);
+-#line 2464
+-#line 14322 "prim.i"
++#line 2486
++#line 14344 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14370,10 +14392,10 @@
+ sp += 7;
+ fp += -1;
+ {
+-#line 2465 "./prim"
++#line 2487 "./prim"
+ rret = (SYSCALL(Float(*)(Cell, Cell, Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4, u5, u6);
+-#line 2464
+-#line 14377 "prim.i"
++#line 2486
++#line 14399 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14467,10 +14489,10 @@
+ sp += 21;
+ fp += -1;
+ {
+-#line 2466 "./prim"
++#line 2488 "./prim"
+ rret = (SYSCALL(Float(*)(Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11, u12, u13, u14, u15, u16, u17, u18, u19, u20);
+-#line 2465
+-#line 14474 "prim.i"
++#line 2487
++#line 14496 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14509,9 +14531,9 @@
+ #endif
+ sp += 1;
+ {
+-#line 2477 "./prim"
++#line 2499 "./prim"
+ compile_prim1(a_prim);
+-#line 14515 "prim.i"
++#line 14537 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14537,9 +14559,9 @@
+ }
+ #endif
+ {
+-#line 2482 "./prim"
++#line 2504 "./prim"
+ finish_code();
+-#line 14543 "prim.i"
++#line 14565 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14567,9 +14589,9 @@
+ }
+ #endif
+ {
+-#line 2485 "./prim"
++#line 2507 "./prim"
+ f = forget_dyncode(c_code);
+-#line 14573 "prim.i"
++#line 14595 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14600,9 +14622,9 @@
+ }
+ #endif
+ {
+-#line 2490 "./prim"
++#line 2512 "./prim"
+ a_prim = (Cell *)decompile_code((Label)a_code);
+-#line 14606 "prim.i"
++#line 14628 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14632,11 +14654,11 @@
+ #endif
+ INC_IP(1);
+ {
+-#line 2496 "./prim"
++#line 2518 "./prim"
+ #ifdef NO_IP
+ next_code = (Label)w;
+ #endif
+-#line 14640 "prim.i"
++#line 14662 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14669,7 +14691,7 @@
+ INC_IP(2);
+ rp += -1;
+ {
+-#line 2501 "./prim"
++#line 2523 "./prim"
+ /* call with explicit return address */
+ #ifdef NO_IP
+ 
+@@ -14685,7 +14707,7 @@
+ #else
+ assert(0);
+ #endif
+-#line 14689 "prim.i"
++#line 14711 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14713,10 +14735,10 @@
+ #endif
+ sp += -1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ extern Cell groups[32];
+ a_addr = groups;
+-#line 14720 "prim.i"
++#line 14742 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14755,8 +14777,8 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
+-#line 14760 "prim.i"
++#line 2532 "./prim"
++#line 14782 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14782,9 +14804,9 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ n = n1+n2;
+-#line 14788 "prim.i"
++#line 14810 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14824,8 +14846,8 @@
+ sp += -1;
+ rp += -1;
+ {
+-#line 2510 "./prim"
+-#line 14829 "prim.i"
++#line 2532 "./prim"
++#line 14851 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14848,7 +14870,7 @@
+ #endif
+ INC_IP(3);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ #ifdef NO_IP
+ 
+ #ifdef VM_DEBUG
+@@ -14873,7 +14895,7 @@
+ a_retaddr = (Cell *)IP;
+ SET_IP((Xt *)a_callee);
+ #endif
+-#line 14877 "prim.i"
++#line 14899 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14910,8 +14932,8 @@
+ #endif
+ sp += -1;
+ {
+-#line 2510 "./prim"
+-#line 14915 "prim.i"
++#line 2532 "./prim"
++#line 14937 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14934,9 +14956,9 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = *a_addr;
+-#line 14940 "prim.i"
++#line 14962 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -14977,8 +14999,8 @@
+ sp += -1;
+ rp += -1;
+ {
+-#line 2510 "./prim"
+-#line 14982 "prim.i"
++#line 2532 "./prim"
++#line 15004 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15000,9 +15022,9 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = *a_addr;
+-#line 15006 "prim.i"
++#line 15028 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15026,7 +15048,7 @@
+ #endif
+ INC_IP(4);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ #ifdef NO_IP
+ 
+ #ifdef VM_DEBUG
+@@ -15051,7 +15073,7 @@
+ a_retaddr = (Cell *)IP;
+ SET_IP((Xt *)a_callee);
+ #endif
+-#line 15055 "prim.i"
++#line 15077 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15090,9 +15112,9 @@
+ #endif
+ rp += -1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = *a_addr;
+-#line 15096 "prim.i"
++#line 15118 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15116,7 +15138,7 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ #ifdef NO_IP
+ 
+ #ifdef VM_DEBUG
+@@ -15141,7 +15163,7 @@
+ a_retaddr = (Cell *)IP;
+ SET_IP((Xt *)a_callee);
+ #endif
+-#line 15145 "prim.i"
++#line 15167 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15177,8 +15199,8 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
+-#line 15182 "prim.i"
++#line 2532 "./prim"
++#line 15204 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15204,9 +15226,9 @@
+ INC_IP(2);
+ sp += 1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ *a_addr = w;
+-#line 15210 "prim.i"
++#line 15232 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15243,8 +15265,8 @@
+ #endif
+ sp += -2;
+ {
+-#line 2510 "./prim"
+-#line 15248 "prim.i"
++#line 2532 "./prim"
++#line 15270 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15266,8 +15288,8 @@
+ #endif
+ INC_IP(3);
+ {
+-#line 2510 "./prim"
+-#line 15271 "prim.i"
++#line 2532 "./prim"
++#line 15293 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15303,8 +15325,8 @@
+ #endif
+ sp += -2;
+ {
+-#line 2510 "./prim"
+-#line 15308 "prim.i"
++#line 2532 "./prim"
++#line 15330 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15327,8 +15349,8 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 2510 "./prim"
+-#line 15332 "prim.i"
++#line 2532 "./prim"
++#line 15354 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15366,9 +15388,9 @@
+ #endif
+ sp += 1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ *a_addr = w;
+-#line 15372 "prim.i"
++#line 15394 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15389,8 +15411,8 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 2510 "./prim"
+-#line 15394 "prim.i"
++#line 2532 "./prim"
++#line 15416 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15426,8 +15448,8 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
+-#line 15431 "prim.i"
++#line 2532 "./prim"
++#line 15453 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15451,9 +15473,9 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ *a_addr = w;
+-#line 15457 "prim.i"
++#line 15479 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15474,8 +15496,8 @@
+ #endif
+ INC_IP(4);
+ {
+-#line 2510 "./prim"
+-#line 15479 "prim.i"
++#line 2532 "./prim"
++#line 15501 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15513,9 +15535,9 @@
+ #endif
+ sp += 2;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ *a_addr = w;
+-#line 15519 "prim.i"
++#line 15541 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15537,7 +15559,7 @@
+ INC_IP(1);
+ rp += 1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ #ifdef NO_IP
+ 
+ #ifdef VM_DEBUG
+@@ -15554,7 +15576,7 @@
+ #else
+ SET_IP((Xt *)w);
+ #endif
+-#line 15558 "prim.i"
++#line 15580 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15591,8 +15613,8 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
+-#line 15596 "prim.i"
++#line 2532 "./prim"
++#line 15618 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15617,9 +15639,9 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ n = n1+n2;
+-#line 15623 "prim.i"
++#line 15645 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15643,9 +15665,9 @@
+ #endif
+ INC_IP(3);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = *a_addr;
+-#line 15649 "prim.i"
++#line 15671 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15681,10 +15703,10 @@
+ #endif
+ sp += 1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ f = FLAG(n==0);
+ #line 1012
+-#line 15688 "prim.i"
++#line 15710 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15710,9 +15732,9 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ 
+ #ifdef VM_DEBUG
+ if (vm_debug) {
+@@ -15723,19 +15745,19 @@
+ NEXT_P1;
+ IF_spTOS(spTOS = sp[0]);
+ 
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ if (f==0) {
+-#line 337
++#line 331
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ JUMP(a_target);
+-#line 337
++#line 331
+ #else
+-#line 337
++#line 331
+ SET_IP((Xt *)a_target);
+-#line 337
++#line 331
+ 
+ #ifdef VM_DEBUG
+ if (vm_debug) {
+@@ -15746,14 +15768,14 @@
+ NEXT_P1;
+ IF_spTOS(spTOS = sp[0]);
+  NEXT_P2;
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ }
+-#line 337
++#line 331
+ SUPER_CONTINUE;
+-#line 337
+-#line 15757 "prim.i"
++#line 331
++#line 15779 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15792,8 +15814,8 @@
+ sp += -1;
+ rp += -1;
+ {
+-#line 2510 "./prim"
+-#line 15797 "prim.i"
++#line 2532 "./prim"
++#line 15819 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15817,7 +15839,7 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ #ifdef NO_IP
+ 
+ #ifdef VM_DEBUG
+@@ -15842,7 +15864,7 @@
+ a_retaddr = (Cell *)IP;
+ SET_IP((Xt *)a_callee);
+ #endif
+-#line 15846 "prim.i"
++#line 15868 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15880,9 +15902,9 @@
+ #endif
+ sp += -1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ a_addr = (Cell *)(up+u);
+-#line 15886 "prim.i"
++#line 15908 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15906,9 +15928,9 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = *a_addr;
+-#line 15912 "prim.i"
++#line 15934 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15947,9 +15969,9 @@
+ #endif
+ sp += 1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ n = n1+n2;
+-#line 15953 "prim.i"
++#line 15975 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -15973,9 +15995,9 @@
+ #endif
+ INC_IP(1);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = *a_addr;
+-#line 15979 "prim.i"
++#line 16001 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16011,8 +16033,8 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
+-#line 16016 "prim.i"
++#line 2532 "./prim"
++#line 16038 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16034,9 +16056,9 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = *a_addr;
+-#line 16040 "prim.i"
++#line 16062 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16062,9 +16084,9 @@
+ #endif
+ INC_IP(4);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ 
+ #ifdef VM_DEBUG
+ if (vm_debug) {
+@@ -16074,19 +16096,19 @@
+ SUPER_END;
+ NEXT_P1;
+ 
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ if (f==0) {
+-#line 337
++#line 331
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ JUMP(a_target);
+-#line 337
++#line 331
+ #else
+-#line 337
++#line 331
+ SET_IP((Xt *)a_target);
+-#line 337
++#line 331
+ 
+ #ifdef VM_DEBUG
+ if (vm_debug) {
+@@ -16096,14 +16118,14 @@
+ SUPER_END;
+ NEXT_P1;
+  NEXT_P2;
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ }
+-#line 337
++#line 331
+ SUPER_CONTINUE;
+-#line 337
+-#line 16107 "prim.i"
++#line 331
++#line 16129 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16139,8 +16161,8 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
+-#line 16144 "prim.i"
++#line 2532 "./prim"
++#line 16166 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16165,9 +16187,9 @@
+ #endif
+ sp += 1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ *a_addr = w;
+-#line 16171 "prim.i"
++#line 16193 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16189,7 +16211,7 @@
+ INC_IP(3);
+ rp += 1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ #ifdef NO_IP
+ 
+ #ifdef VM_DEBUG
+@@ -16206,7 +16228,7 @@
+ #else
+ SET_IP((Xt *)w);
+ #endif
+-#line 16210 "prim.i"
++#line 16232 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16243,8 +16265,8 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
+-#line 16248 "prim.i"
++#line 2532 "./prim"
++#line 16270 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16266,9 +16288,9 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = *a_addr;
+-#line 16272 "prim.i"
++#line 16294 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16295,9 +16317,9 @@
+ #endif
+ INC_IP(3);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = w1&w2;
+-#line 16301 "prim.i"
++#line 16323 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16337,10 +16359,10 @@
+ #endif
+ sp += 2;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ f = FLAG(n1==n2);
+ #line 1013
+-#line 16344 "prim.i"
++#line 16366 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16366,9 +16388,9 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ 
+ #ifdef VM_DEBUG
+ if (vm_debug) {
+@@ -16379,19 +16401,19 @@
+ NEXT_P1;
+ IF_spTOS(spTOS = sp[0]);
+ 
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ if (f==0) {
+-#line 337
++#line 331
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ JUMP(a_target);
+-#line 337
++#line 331
+ #else
+-#line 337
++#line 331
+ SET_IP((Xt *)a_target);
+-#line 337
++#line 331
+ 
+ #ifdef VM_DEBUG
+ if (vm_debug) {
+@@ -16402,14 +16424,14 @@
+ NEXT_P1;
+ IF_spTOS(spTOS = sp[0]);
+  NEXT_P2;
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ }
+-#line 337
++#line 331
+ SUPER_CONTINUE;
+-#line 337
+-#line 16413 "prim.i"
++#line 331
++#line 16435 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16446,8 +16468,8 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
+-#line 16451 "prim.i"
++#line 2532 "./prim"
++#line 16473 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16468,8 +16490,8 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
+-#line 16473 "prim.i"
++#line 2532 "./prim"
++#line 16495 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16494,9 +16516,9 @@
+ #endif
+ INC_IP(4);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ *a_addr = w;
+-#line 16500 "prim.i"
++#line 16522 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16530,9 +16552,9 @@
+ #endif
+ sp += 1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = *a_addr;
+-#line 16536 "prim.i"
++#line 16558 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16558,9 +16580,9 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ 
+ #ifdef VM_DEBUG
+ if (vm_debug) {
+@@ -16571,19 +16593,19 @@
+ NEXT_P1;
+ IF_spTOS(spTOS = sp[0]);
+ 
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ if (f==0) {
+-#line 337
++#line 331
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ JUMP(a_target);
+-#line 337
++#line 331
+ #else
+-#line 337
++#line 331
+ SET_IP((Xt *)a_target);
+-#line 337
++#line 331
+ 
+ #ifdef VM_DEBUG
+ if (vm_debug) {
+@@ -16594,14 +16616,14 @@
+ NEXT_P1;
+ IF_spTOS(spTOS = sp[0]);
+  NEXT_P2;
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ }
+-#line 337
++#line 331
+ SUPER_CONTINUE;
+-#line 337
+-#line 16605 "prim.i"
++#line 331
++#line 16627 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16637,9 +16659,9 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ a_addr = (Cell *)(up+u);
+-#line 16643 "prim.i"
++#line 16665 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16666,9 +16688,9 @@
+ INC_IP(2);
+ sp += 1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ *a_addr = w;
+-#line 16672 "prim.i"
++#line 16694 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16702,8 +16724,8 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
+-#line 16707 "prim.i"
++#line 2532 "./prim"
++#line 16729 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16729,9 +16751,9 @@
+ #endif
+ INC_IP(2);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ 
+ #ifdef VM_DEBUG
+ if (vm_debug) {
+@@ -16741,19 +16763,19 @@
+ SUPER_END;
+ NEXT_P1;
+ 
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ if (f==0) {
+-#line 337
++#line 331
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ JUMP(a_target);
+-#line 337
++#line 331
+ #else
+-#line 337
++#line 331
+ SET_IP((Xt *)a_target);
+-#line 337
++#line 331
+ 
+ #ifdef VM_DEBUG
+ if (vm_debug) {
+@@ -16763,14 +16785,14 @@
+ SUPER_END;
+ NEXT_P1;
+  NEXT_P2;
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ }
+-#line 337
++#line 331
+ SUPER_CONTINUE;
+-#line 337
+-#line 16774 "prim.i"
++#line 331
++#line 16796 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16804,9 +16826,9 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = *a_addr;
+-#line 16810 "prim.i"
++#line 16832 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16830,7 +16852,7 @@
+ INC_IP(1);
+ rp += 1;
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ #ifdef NO_IP
+ 
+ #ifdef VM_DEBUG
+@@ -16846,7 +16868,7 @@
+ #else
+ SET_IP((Xt *)w);
+ #endif
+-#line 16850 "prim.i"
++#line 16872 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16882,8 +16904,8 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
+-#line 16887 "prim.i"
++#line 2532 "./prim"
++#line 16909 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16905,9 +16927,9 @@
+ }
+ #endif
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = *a_addr;
+-#line 16911 "prim.i"
++#line 16933 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16934,9 +16956,9 @@
+ #endif
+ INC_IP(3);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ n = n1+n2;
+-#line 16940 "prim.i"
++#line 16962 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16971,8 +16993,8 @@
+ #endif
+ sp += -1;
+ {
+-#line 2510 "./prim"
+-#line 16976 "prim.i"
++#line 2532 "./prim"
++#line 16998 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+@@ -16996,9 +17018,9 @@
+ #endif
+ INC_IP(1);
+ {
+-#line 2510 "./prim"
++#line 2532 "./prim"
+ w = *a_addr;
+-#line 17002 "prim.i"
++#line 17024 "prim.i"
+ }
+ 
+ #ifdef VM_DEBUG
+Only in .: kernel.tags
+Binary files ../gforth-0.6.2/kernl16b.fi and ./kernl16b.fi differ
+Binary files ../gforth-0.6.2/kernl16l.fi and ./kernl16l.fi differ
+Binary files ../gforth-0.6.2/kernl32b.fi and ./kernl32b.fi differ
+Binary files ../gforth-0.6.2/kernl32l.fi and ./kernl32l.fi differ
+Binary files ../gforth-0.6.2/kernl64b.fi and ./kernl64b.fi differ
+Binary files ../gforth-0.6.2/kernl64l.fi and ./kernl64l.fi differ
+Only in .: machpc.fs
+diff -r -u ../gforth-0.6.2/prim ./prim
+--- ../gforth-0.6.2/prim	2003-08-24 07:39:31.000000000 +0200
++++ ./prim	2008-10-02 14:50:30.000000000 +0200
+@@ -2305,7 +2305,11 @@
+ av_double(alist, r);
+ 
+ av-longlong	( d -- )	gforth  av_longlong
++#ifdef BUGGY_LONG_LONG
++av_longlong(alist, d.lo);
++#else
+ av_longlong(alist, d);
++#endif
+ 
+ av-ptr	( c_addr -- )	gforth  av_ptr
+ av_ptr(alist, void*, c_addr);
+@@ -2324,7 +2328,11 @@
+ av_double(alist, r);
+ 
+ av-longlong-r	( R:d -- )	gforth  av_longlong_r
++#ifdef BUGGY_LONG_LONG
++av_longlong(alist, d.lo);
++#else
+ av_longlong(alist, d);
++#endif
+ 
+ av-ptr-r	( R:c_addr -- )	gforth  av_ptr_r
+ av_ptr(alist, void*, c_addr);
+@@ -2356,7 +2364,12 @@
+ SAVE_REGS
+ av_call(alist);
+ REST_REGS
++#ifdef BUGGY_LONG_LONG
++d.lo = llrv;
++d.hi = 0;
++#else
+ d = llrv;
++#endif
+ 
+ av-call-ptr	( -- c_addr )	gforth  av_call_ptr
+ SAVE_REGS
+@@ -2389,7 +2402,12 @@
+ w = va_arg_int(clist);
+ 
+ va-arg-longlong	( -- d )	gforth	va_arg_longlong
++#ifdef BUGGY_LONG_LONG
++d.lo = va_arg_longlong(clist);
++d.hi = 0;
++#else
+ d = va_arg_longlong(clist);
++#endif
+ 
+ va-arg-ptr	( -- c_addr )	gforth	va_arg_ptr
+ c_addr = (char *)va_arg_ptr(clist,char*);
+@@ -2413,7 +2431,11 @@
+ return 0;
+ 
+ va-return-longlong ( d -- )	gforth va_return_longlong
++#ifdef BUGGY_LONG_LONG
++va_return_longlong(clist, d.lo);
++#else
+ va_return_longlong(clist, d);
++#endif
+ return 0;
+ 
+ va-return-float ( r -- )	gforth va_return_float
+diff -r -u ../gforth-0.6.2/prim.b ./prim.b
+--- ../gforth-0.6.2/prim.b	2003-08-24 08:07:22.000000000 +0200
++++ ./prim.b	2008-10-02 14:50:32.000000000 +0200
+@@ -25,7 +25,7 @@
+ \ 
+ \ 
+ \ 
+-\ This file contains primitive specifications in the following :
++\ This file contains primitive specifications in the following format:
+ \ 
+ \ forth name	( stack effect )	category	[pronunciation]
+ \ [""glossary entry""]
+@@ -298,79 +298,78 @@
+ #line 329
+ 
+ 
+-#line 337
+ ?branch ( #a_target f -- ) f83	question_branch
+-#line 337
++#line 331
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ INST_TAIL;
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ if (f==0) {
+-#line 337
++#line 331
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ JUMP(a_target);
+-#line 337
++#line 331
+ #else
+-#line 337
++#line 331
+ SET_IP((Xt *)a_target);
+-#line 337
++#line 331
+ INST_TAIL; NEXT_P2;
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ }
+-#line 337
++#line 331
+ SUPER_CONTINUE;
+-#line 337
++#line 331
+ :
+-#line 337
++#line 331
+  0= dup 0=          \ !f f
+-#line 337
++#line 331
+  r> tuck cell+      \ !f branchoffset f IP+
+-#line 337
++#line 331
+  and -rot @ and or  \ f&IP+|!f&branch
+-#line 337
++#line 331
+  >r ;
+-#line 337
++#line 331
+ 
+-#line 337
++#line 331
+ \+glocals
+-#line 337
++#line 331
+ 
+-#line 337
++#line 331
+ ?branch-lp+!# ( #a_target #nlocals f -- ) f83	question_branch_lp_plus_store_number
+-#line 337
++#line 331
+ 	#ifdef NO_IP
+-#line 337
++#line 331
+ INST_TAIL;
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ if (f==0) {
+-#line 337
++#line 331
+ 	lp += nlocals;
+-#line 337
++#line 331
+ #ifdef NO_IP
+-#line 337
++#line 331
+ JUMP(a_target);
+-#line 337
++#line 331
+ #else
+-#line 337
++#line 331
+ SET_IP((Xt *)a_target);
+-#line 337
++#line 331
+ INST_TAIL; NEXT_P2;
+-#line 337
++#line 331
+ #endif
+-#line 337
++#line 331
+ }
+-#line 337
++#line 331
+ SUPER_CONTINUE;
+-#line 337
++#line 331
+ 
+-#line 337
++#line 331
+ \+
+ #line 337
+ 
+@@ -415,455 +414,450 @@
+ \+
+ \fhas? skiploopprims 0= [IF]
+ 
+-#line 384
+ (next) ( #a_target R:n1 -- R:n2 ) cmFORTH	paren_next
+-#line 384
++#line 379
+ n2=n1-1;
+-#line 384
++#line 379
+ 	#ifdef NO_IP
+-#line 384
++#line 379
+ INST_TAIL;
+-#line 384
++#line 379
+ #endif
+-#line 384
++#line 379
+ if (n1) {
+-#line 384
++#line 379
+ 	#ifdef NO_IP
+-#line 384
++#line 379
+ JUMP(a_target);
+-#line 384
++#line 379
+ #else
+-#line 384
++#line 379
+ SET_IP((Xt *)a_target);
+-#line 384
++#line 379
+ INST_TAIL; NEXT_P2;
+-#line 384
++#line 379
+ #endif
+-#line 384
++#line 379
+ }
+-#line 384
++#line 379
+ SUPER_CONTINUE;
+-#line 384
++#line 379
+ :
+-#line 384
++#line 379
+  r> r> dup 1- >r
+-#line 384
++#line 379
+  IF @ >r ELSE cell+ >r THEN ;
+-#line 384
++#line 379
+ 
+-#line 384
++#line 379
+ \+glocals
+-#line 384
++#line 379
+ 
+-#line 384
++#line 379
+ (next)-lp+!# ( #a_target #nlocals R:n1 -- R:n2 ) cmFORTH	paren_next_lp_plus_store_number
+-#line 384
++#line 379
+ n2=n1-1;
+-#line 384
++#line 379
+ 	#ifdef NO_IP
+-#line 384
++#line 379
+ INST_TAIL;
+-#line 384
++#line 379
+ #endif
+-#line 384
++#line 379
+ if (n1) {
+-#line 384
++#line 379
+ 	lp += nlocals;
+-#line 384
++#line 379
+ #ifdef NO_IP
+-#line 384
++#line 379
+ JUMP(a_target);
+-#line 384
++#line 379
+ #else
+-#line 384
++#line 379
+ SET_IP((Xt *)a_target);
+-#line 384
++#line 379
+ INST_TAIL; NEXT_P2;
+-#line 384
++#line 379
+ #endif
+-#line 384
++#line 379
+ }
+-#line 384
++#line 379
+ SUPER_CONTINUE;
+-#line 384
++#line 379
+ 
+-#line 384
++#line 379
+ \+
+ #line 384
+ 
+ 
+-#line 392
+ (loop) ( #a_target R:nlimit R:n1 -- R:nlimit R:n2 ) gforth	paren_loop
+-#line 392
++#line 386
+ n2=n1+1;
+-#line 392
++#line 386
+ 	#ifdef NO_IP
+-#line 392
++#line 386
+ INST_TAIL;
+-#line 392
++#line 386
+ #endif
+-#line 392
++#line 386
+ if (n2 != nlimit) {
+-#line 392
++#line 386
+ 	#ifdef NO_IP
+-#line 392
++#line 386
+ JUMP(a_target);
+-#line 392
++#line 386
+ #else
+-#line 392
++#line 386
+ SET_IP((Xt *)a_target);
+-#line 392
++#line 386
+ INST_TAIL; NEXT_P2;
+-#line 392
++#line 386
+ #endif
+-#line 392
++#line 386
+ }
+-#line 392
++#line 386
+ SUPER_CONTINUE;
+-#line 392
++#line 386
+ :
+-#line 392
++#line 386
+  r> r> 1+ r> 2dup =
+-#line 392
++#line 386
+  IF >r 1- >r cell+ >r
+-#line 392
++#line 386
+  ELSE >r >r @ >r THEN ;
+-#line 392
++#line 386
+ 
+-#line 392
++#line 386
+ \+glocals
+-#line 392
++#line 386
+ 
+-#line 392
++#line 386
+ (loop)-lp+!# ( #a_target #nlocals R:nlimit R:n1 -- R:nlimit R:n2 ) gforth	paren_loop_lp_plus_store_number
+-#line 392
++#line 386
+ n2=n1+1;
+-#line 392
++#line 386
+ 	#ifdef NO_IP
+-#line 392
++#line 386
+ INST_TAIL;
+-#line 392
++#line 386
+ #endif
+-#line 392
++#line 386
+ if (n2 != nlimit) {
+-#line 392
++#line 386
+ 	lp += nlocals;
+-#line 392
++#line 386
+ #ifdef NO_IP
+-#line 392
++#line 386
+ JUMP(a_target);
+-#line 392
++#line 386
+ #else
+-#line 392
++#line 386
+ SET_IP((Xt *)a_target);
+-#line 392
++#line 386
+ INST_TAIL; NEXT_P2;
+-#line 392
++#line 386
+ #endif
+-#line 392
++#line 386
+ }
+-#line 392
++#line 386
+ SUPER_CONTINUE;
+-#line 392
++#line 386
+ 
+-#line 392
++#line 386
+ \+
+ #line 392
+ 
+ 
+-#line 408
+ (+loop) ( #a_target n R:nlimit R:n1 -- R:nlimit R:n2 ) gforth paren_plus_loop
+-#line 408
++#line 394
+ /* !! check this thoroughly */
+-#line 408
++#line 394
+ /* sign bit manipulation and test: (x^y)<0 is equivalent to (x<0) != (y<0) */
+-#line 408
++#line 394
+ /* dependent upon two's complement arithmetic */
+-#line 408
++#line 394
+ Cell olddiff = n1-nlimit;
+-#line 408
++#line 394
+ n2=n1+n;	
+-#line 408
++#line 394
+ 	#ifdef NO_IP
+-#line 408
++#line 394
+ INST_TAIL;
+-#line 408
++#line 394
+ #endif
+-#line 408
++#line 394
+ if ((olddiff^(olddiff+n))>=0   /* the limit is not crossed */
+-#line 408
++#line 394
+     || (olddiff^n)>=0          /* it is a wrap-around effect */) {
+-#line 408
++#line 394
+ 	#ifdef NO_IP
+-#line 408
++#line 394
+ JUMP(a_target);
+-#line 408
++#line 394
+ #else
+-#line 408
++#line 394
+ SET_IP((Xt *)a_target);
+-#line 408
++#line 394
+ INST_TAIL; NEXT_P2;
+-#line 408
++#line 394
+ #endif
+-#line 408
++#line 394
+ }
+-#line 408
++#line 394
+ SUPER_CONTINUE;
+-#line 408
++#line 394
+ :
+-#line 408
++#line 394
+  r> swap
+-#line 408
++#line 394
+  r> r> 2dup - >r
+-#line 408
++#line 394
+  2 pick r@ + r@ xor 0< 0=
+-#line 408
++#line 394
+  3 pick r> xor 0< 0= or
+-#line 408
++#line 394
+  IF    >r + >r @ >r
+-#line 408
++#line 394
+  ELSE  >r >r drop cell+ >r THEN ;
+-#line 408
++#line 394
+ 
+-#line 408
++#line 394
+ \+glocals
+-#line 408
++#line 394
+ 
+-#line 408
++#line 394
+ (+loop)-lp+!# ( #a_target #nlocals n R:nlimit R:n1 -- R:nlimit R:n2 ) gforth paren_plus_loop_lp_plus_store_number
+-#line 408
++#line 394
+ /* !! check this thoroughly */
+-#line 408
++#line 394
+ /* sign bit manipulation and test: (x^y)<0 is equivalent to (x<0) != (y<0) */
+-#line 408
++#line 394
+ /* dependent upon two's complement arithmetic */
+-#line 408
++#line 394
+ Cell olddiff = n1-nlimit;
+-#line 408
++#line 394
+ n2=n1+n;	
+-#line 408
++#line 394
+ 	#ifdef NO_IP
+-#line 408
++#line 394
+ INST_TAIL;
+-#line 408
++#line 394
+ #endif
+-#line 408
++#line 394
+ if ((olddiff^(olddiff+n))>=0   /* the limit is not crossed */
+-#line 408
++#line 394
+     || (olddiff^n)>=0          /* it is a wrap-around effect */) {
+-#line 408
++#line 394
+ 	lp += nlocals;
+-#line 408
++#line 394
+ #ifdef NO_IP
+-#line 408
++#line 394
+ JUMP(a_target);
+-#line 408
++#line 394
+ #else
+-#line 408
++#line 394
+ SET_IP((Xt *)a_target);
+-#line 408
++#line 394
+ INST_TAIL; NEXT_P2;
+-#line 408
++#line 394
+ #endif
+-#line 408
++#line 394
+ }
+-#line 408
++#line 394
+ SUPER_CONTINUE;
+-#line 408
++#line 394
+ 
+-#line 408
++#line 394
+ \+
+ #line 408
+ 
+ 
+ \+xconds
+ 
+-#line 416
+ (-loop) ( #a_target u R:nlimit R:n1 -- R:nlimit R:n2 ) gforth paren_minus_loop
+-#line 416
++#line 412
+ UCell olddiff = n1-nlimit;
+-#line 416
++#line 412
+ n2=n1-u;
+-#line 416
++#line 412
+ 	#ifdef NO_IP
+-#line 416
++#line 412
+ INST_TAIL;
+-#line 416
++#line 412
+ #endif
+-#line 416
++#line 412
+ if (olddiff>u) {
+-#line 416
++#line 412
+ 	#ifdef NO_IP
+-#line 416
++#line 412
+ JUMP(a_target);
+-#line 416
++#line 412
+ #else
+-#line 416
++#line 412
+ SET_IP((Xt *)a_target);
+-#line 416
++#line 412
+ INST_TAIL; NEXT_P2;
+-#line 416
++#line 412
+ #endif
+-#line 416
++#line 412
+ }
+-#line 416
++#line 412
+ SUPER_CONTINUE;
+-#line 416
++#line 412
+ 
+-#line 416
++#line 412
+ 
+-#line 416
++#line 412
+ \+glocals
+-#line 416
++#line 412
+ 
+-#line 416
++#line 412
+ (-loop)-lp+!# ( #a_target #nlocals u R:nlimit R:n1 -- R:nlimit R:n2 ) gforth paren_minus_loop_lp_plus_store_number
+-#line 416
++#line 412
+ UCell olddiff = n1-nlimit;
+-#line 416
++#line 412
+ n2=n1-u;
+-#line 416
++#line 412
+ 	#ifdef NO_IP
+-#line 416
++#line 412
+ INST_TAIL;
+-#line 416
++#line 412
+ #endif
+-#line 416
++#line 412
+ if (olddiff>u) {
+-#line 416
++#line 412
+ 	lp += nlocals;
+-#line 416
++#line 412
+ #ifdef NO_IP
+-#line 416
++#line 412
+ JUMP(a_target);
+-#line 416
++#line 412
+ #else
+-#line 416
++#line 412
+ SET_IP((Xt *)a_target);
+-#line 416
++#line 412
+ INST_TAIL; NEXT_P2;
+-#line 416
++#line 412
+ #endif
+-#line 416
++#line 412
+ }
+-#line 416
++#line 412
+ SUPER_CONTINUE;
+-#line 416
++#line 412
+ 
+-#line 416
++#line 412
+ \+
+ #line 416
+ 
+ 
+-#line 431
+ (s+loop) ( #a_target n R:nlimit R:n1 -- R:nlimit R:n2 ) gforth	paren_symmetric_plus_loop
+-#line 431
++#line 418
+ ""The run-time procedure compiled by S+LOOP. It loops until the index
+-#line 431
++#line 418
+ crosses the boundary between limit and limit-sign(n). I.e. a symmetric
+-#line 431
++#line 418
+ version of (+LOOP).""
+-#line 431
++#line 418
+ /* !! check this thoroughly */
+-#line 431
++#line 418
+ Cell diff = n1-nlimit;
+-#line 431
++#line 418
+ Cell newdiff = diff+n;
+-#line 431
++#line 418
+ if (n<0) {
+-#line 431
++#line 418
+     diff = -diff;
+-#line 431
++#line 418
+     newdiff = -newdiff;
+-#line 431
++#line 418
+ }
+-#line 431
++#line 418
+ n2=n1+n;
+-#line 431
++#line 418
+ 	#ifdef NO_IP
+-#line 431
++#line 418
+ INST_TAIL;
+-#line 431
++#line 418
+ #endif
+-#line 431
++#line 418
+ if (diff>=0 || newdiff<0) {
+-#line 431
++#line 418
+ 	#ifdef NO_IP
+-#line 431
++#line 418
+ JUMP(a_target);
+-#line 431
++#line 418
+ #else
+-#line 431
++#line 418
+ SET_IP((Xt *)a_target);
+-#line 431
++#line 418
+ INST_TAIL; NEXT_P2;
+-#line 431
++#line 418
+ #endif
+-#line 431
++#line 418
+ }
+-#line 431
++#line 418
+ SUPER_CONTINUE;
+-#line 431
++#line 418
+ 
+-#line 431
++#line 418
+ 
+-#line 431
++#line 418
+ \+glocals
+-#line 431
++#line 418
+ 
+-#line 431
++#line 418
+ (s+loop)-lp+!# ( #a_target #nlocals n R:nlimit R:n1 -- R:nlimit R:n2 ) gforth	paren_symmetric_plus_loop_lp_plus_store_number
+-#line 431
++#line 418
+ ""The run-time procedure compiled by S+LOOP. It loops until the index
+-#line 431
++#line 418
+ crosses the boundary between limit and limit-sign(n). I.e. a symmetric
+-#line 431
++#line 418
+ version of (+LOOP).""
+-#line 431
++#line 418
+ /* !! check this thoroughly */
+-#line 431
++#line 418
+ Cell diff = n1-nlimit;
+-#line 431
++#line 418
+ Cell newdiff = diff+n;
+-#line 431
++#line 418
+ if (n<0) {
+-#line 431
++#line 418
+     diff = -diff;
+-#line 431
++#line 418
+     newdiff = -newdiff;
+-#line 431
++#line 418
+ }
+-#line 431
++#line 418
+ n2=n1+n;
+-#line 431
++#line 418
+ 	#ifdef NO_IP
+-#line 431
++#line 418
+ INST_TAIL;
+-#line 431
++#line 418
+ #endif
+-#line 431
++#line 418
+ if (diff>=0 || newdiff<0) {
+-#line 431
++#line 418
+ 	lp += nlocals;
+-#line 431
++#line 418
+ #ifdef NO_IP
+-#line 431
++#line 418
+ JUMP(a_target);
+-#line 431
++#line 418
+ #else
+-#line 431
++#line 418
+ SET_IP((Xt *)a_target);
+-#line 431
++#line 418
+ INST_TAIL; NEXT_P2;
+-#line 431
++#line 418
+ #endif
+-#line 431
++#line 418
+ }
+-#line 431
++#line 418
+ SUPER_CONTINUE;
+-#line 431
++#line 418
+ 
+-#line 431
++#line 418
+ \+
+ #line 431
+ 
+@@ -3376,7 +3370,11 @@
+ av_double(alist, r);
+ 
+ av-longlong	( d -- )	gforth  av_longlong
++#ifdef BUGGY_LONG_LONG
++av_longlong(alist, d.lo);
++#else
+ av_longlong(alist, d);
++#endif
+ 
+ av-ptr	( c_addr -- )	gforth  av_ptr
+ av_ptr(alist, void*, c_addr);
+@@ -3395,7 +3393,11 @@
+ av_double(alist, r);
+ 
+ av-longlong-r	( R:d -- )	gforth  av_longlong_r
++#ifdef BUGGY_LONG_LONG
++av_longlong(alist, d.lo);
++#else
+ av_longlong(alist, d);
++#endif
+ 
+ av-ptr-r	( R:c_addr -- )	gforth  av_ptr_r
+ av_ptr(alist, void*, c_addr);
+@@ -3427,7 +3429,12 @@
+ SAVE_REGS
+ av_call(alist);
+ REST_REGS
++#ifdef BUGGY_LONG_LONG
++d.lo = llrv;
++d.hi = 0;
++#else
+ d = llrv;
++#endif
+ 
+ av-call-ptr	( -- c_addr )	gforth  av_call_ptr
+ SAVE_REGS
+@@ -3460,7 +3467,12 @@
+ w = va_arg_int(clist);
+ 
+ va-arg-longlong	( -- d )	gforth	va_arg_longlong
++#ifdef BUGGY_LONG_LONG
++d.lo = va_arg_longlong(clist);
++d.hi = 0;
++#else
+ d = va_arg_longlong(clist);
++#endif
+ 
+ va-arg-ptr	( -- c_addr )	gforth	va_arg_ptr
+ c_addr = (char *)va_arg_ptr(clist,char*);
+@@ -3484,7 +3496,11 @@
+ return 0;
+ 
+ va-return-longlong ( d -- )	gforth va_return_longlong
++#ifdef BUGGY_LONG_LONG
++va_return_longlong(clist, d.lo);
++#else
+ va_return_longlong(clist, d);
++#endif
+ return 0;
+ 
+ va-return-float ( r -- )	gforth va_return_float
+@@ -3499,126 +3515,126 @@
+ 
+ \+OLDCALL
+ 
+-#line 2432
++#line 2454
+ 
+-#line 2435
++#line 2457
+ 
+ \ argflist(argnum): Forth argument list
+-#line 2439
++#line 2461
+ 
+ \ argdlist(argnum): declare C's arguments
+-#line 2443
++#line 2465
+ 
+ \ argclist(argnum): pass C's arguments
+-#line 2447
++#line 2469
+ 
+ \ icall(argnum)
+-#line 2453
++#line 2475
+ 
+-#line 2458
++#line 2480
+ 
+ 
+ \ close ' to keep fontify happy
+ 
+ icall0	( u -- uret )	gforth
+-#line 2462
++#line 2484
+ uret = (SYSCALL(Cell(*)())u)();
+-#line 2462
++#line 2484
+ 
+-#line 2462
++#line 2484
+ icall1	( u1 u -- uret )	gforth
+-#line 2462
++#line 2484
+ uret = (SYSCALL(Cell(*)(Cell))u)(u1);
+-#line 2462
++#line 2484
+ 
+-#line 2462
++#line 2484
+ icall2	( u1 u2 u -- uret )	gforth
+-#line 2462
++#line 2484
+ uret = (SYSCALL(Cell(*)(Cell, Cell))u)(u1, u2);
+-#line 2462
++#line 2484
+ 
+-#line 2462
++#line 2484
+ icall3	( u1 u2 u3 u -- uret )	gforth
+-#line 2462
++#line 2484
+ uret = (SYSCALL(Cell(*)(Cell, Cell, Cell))u)(u1, u2, u3);
+-#line 2462
++#line 2484
+ 
+-#line 2462
++#line 2484
+ icall4	( u1 u2 u3 u4 u -- uret )	gforth
+-#line 2462
++#line 2484
+ uret = (SYSCALL(Cell(*)(Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4);
+-#line 2462
++#line 2484
+ 
+-#line 2462
++#line 2484
+ icall5	( u1 u2 u3 u4 u5 u -- uret )	gforth
+-#line 2462
++#line 2484
+ uret = (SYSCALL(Cell(*)(Cell, Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4, u5);
+-#line 2462
++#line 2484
+ 
+-#line 2462
++#line 2484
+ icall6	( u1 u2 u3 u4 u5 u6 u -- uret )	gforth
+-#line 2462
++#line 2484
+ uret = (SYSCALL(Cell(*)(Cell, Cell, Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4, u5, u6);
+-#line 2462
++#line 2484
+ 
+-#line 2462
++#line 2484
+ 
+ icall20	( u1 u2 u3 u4 u5 u6 u7 u8 u9 u10 u11 u12 u13 u14 u15 u16 u17 u18 u19 u20 u -- uret )	gforth
+-#line 2463
++#line 2485
+ uret = (SYSCALL(Cell(*)(Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11, u12, u13, u14, u15, u16, u17, u18, u19, u20);
+-#line 2463
++#line 2485
+ 
+-#line 2463
++#line 2485
+ 
+ fcall0	( u -- rret )	gforth
+-#line 2464
++#line 2486
+ rret = (SYSCALL(Float(*)())u)();
+-#line 2464
++#line 2486
+ 
+-#line 2464
++#line 2486
+ fcall1	( u1 u -- rret )	gforth
+-#line 2464
++#line 2486
+ rret = (SYSCALL(Float(*)(Cell))u)(u1);
+-#line 2464
++#line 2486
+ 
+-#line 2464
++#line 2486
+ fcall2	( u1 u2 u -- rret )	gforth
+-#line 2464
++#line 2486
+ rret = (SYSCALL(Float(*)(Cell, Cell))u)(u1, u2);
+-#line 2464
++#line 2486
+ 
+-#line 2464
++#line 2486
+ fcall3	( u1 u2 u3 u -- rret )	gforth
+-#line 2464
++#line 2486
+ rret = (SYSCALL(Float(*)(Cell, Cell, Cell))u)(u1, u2, u3);
+-#line 2464
++#line 2486
+ 
+-#line 2464
++#line 2486
+ fcall4	( u1 u2 u3 u4 u -- rret )	gforth
+-#line 2464
++#line 2486
+ rret = (SYSCALL(Float(*)(Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4);
+-#line 2464
++#line 2486
+ 
+-#line 2464
++#line 2486
+ fcall5	( u1 u2 u3 u4 u5 u -- rret )	gforth
+-#line 2464
++#line 2486
+ rret = (SYSCALL(Float(*)(Cell, Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4, u5);
+-#line 2464
++#line 2486
+ 
+-#line 2464
++#line 2486
+ fcall6	( u1 u2 u3 u4 u5 u6 u -- rret )	gforth
+-#line 2464
++#line 2486
+ rret = (SYSCALL(Float(*)(Cell, Cell, Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4, u5, u6);
+-#line 2464
++#line 2486
+ 
+-#line 2464
++#line 2486
+ 
+ fcall20	( u1 u2 u3 u4 u5 u6 u7 u8 u9 u10 u11 u12 u13 u14 u15 u16 u17 u18 u19 u20 u -- rret )	gforth
+-#line 2465
++#line 2487
+ rret = (SYSCALL(Float(*)(Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell, Cell))u)(u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11, u12, u13, u14, u15, u16, u17, u18, u19, u20);
+-#line 2465
++#line 2487
+ 
+-#line 2465
++#line 2487
+ 
+ 
+ \+
+@@ -3701,7 +3717,7 @@
+ super25 = @ ;s
+ super26 = lit @ +
+ super27 = dup @
+-#line 2518 "./prim"
++#line 2540 "./prim"
+ 
+ 
+ \C #endif
