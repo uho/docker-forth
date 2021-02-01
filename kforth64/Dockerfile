@@ -1,4 +1,4 @@
-FROM debian 
+FROM debian:buster 
 RUN apt-get update -q 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
    binutils gcc: g++ \

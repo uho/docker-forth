@@ -1,4 +1,4 @@
-FROM debian 
+FROM debian:buster
 RUN dpkg --add-architecture i386
 RUN apt-get update -q 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \

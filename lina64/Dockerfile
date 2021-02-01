@@ -1,4 +1,4 @@
-FROM debian 
+FROM debian:stretch 
 RUN dpkg --add-architecture i386
 RUN apt-get update -q \
   && DEBIAN_FRONTEND=noninteractive \

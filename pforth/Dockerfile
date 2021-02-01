@@ -1,4 +1,4 @@
-FROM debian 
+FROM debian:buster 
 RUN mkdir /src
 VOLUME /src
 WORKDIR /src
