@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Build and push all free Docker-Forth images
 
 on:
   push:
@@ -6,13 +6,6 @@ on:
   pull_request:
     branches: [ master ]
   workflow_dispatch:
-
-name: ci
-
-on:
-  push:
-    branches:
-      - 'master'
 
 jobs:
   docker:
