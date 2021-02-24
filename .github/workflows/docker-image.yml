@@ -14,11 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
+    - name: Log into Docker-Hub
+      run: docker login registry-1.docker.io -u  ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+    
     - name: Build the Docker image for cforth
       run: docker build . --file cforth/Dockerfile --tag cforth:latest
+    
     - name: Push cforth image to Docker Hub
-      uses: docker/build-push-action@v1
-      with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: rundockerforth/cforth
+      run: docker push rundockerforth/cforth:lastest
+
