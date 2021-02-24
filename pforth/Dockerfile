@@ -9,6 +9,6 @@ RUN apt-get update -q \
   && rm -rf /var/lib/apt
 WORKDIR /
 RUN git clone https://github.com/philburk/pforth.git
-WORKDIR /pforth/build/unix
-RUN make all 
+WORKDIR /pforth/platforms/unix
+RUN make all
 ENTRYPOINT ["/pforth/build/unix/pforth"]
