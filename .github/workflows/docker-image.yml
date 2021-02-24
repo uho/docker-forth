@@ -24,10 +24,17 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push
+        name: Build and push cforth
         uses: docker/build-push-action@v2
         with:
           context: ./cforth
           push: true
           tags: rundockerforth/cforth:latest
+      -
+        name: Build and push ueforth
+        uses: docker/build-push-action@v2
+        with:
+          context: ./ueforth
+          push: true
+          tags: rundockerforth/ueforth:latest
 
