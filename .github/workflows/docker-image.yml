@@ -23,5 +23,5 @@ jobs:
       run: docker build . --file cforth/Dockerfile --tag rundockerforth/cforth:latest
     
     - name: Push cforth image to Docker Hub
-      run: docker push rundockerforth/cforth:lastest
+      run: docker push rundockerforth/cforth:latest
 
