@@ -31,10 +31,121 @@ jobs:
           push: true
           tags: rundockerforth/cforth:latest
       -
+        name: Build and push flk
+        uses: docker/build-push-action@v2
+        with:
+          context: ./flk
+          push: true
+          tags: rundockerforth/flk:latest
+      -
+        name: Build and push gforth
+        uses: docker/build-push-action@v2
+        with:
+          context: ./gforth
+          push: true
+          tags: rundockerforth/gforth:latest
+      -
+        name: Build and push gforth-current
+        uses: docker/build-push-action@v2
+        with:
+          context: ./gforth-current
+          push: true
+          tags: rundockerforth/gforth-current:latest
+      -
+        name: Build and push gforth32
+        uses: docker/build-push-action@v2
+        with:
+          context: ./gforth32
+          push: true
+          tags: rundockerforth/gforth32:latest
+      -
+        name: Build and push gforth32-0.6.2-7.3_libffcall1
+        uses: docker/build-push-action@v2
+        with:
+          context: ./gforth32-0.6.2-7.3_libffcall1
+          push: true
+          tags: rundockerforth/gforth32-0.6.2-7.3_libffcall1:latest
+      -
+        name: Build and push gforth64-0.6.2-7.3_libffcall1
+        uses: docker/build-push-action@v2
+        with:
+          context: ./gforth64-0.6.2-7.3_libffcall1
+          push: true
+          tags: rundockerforth/gforth64-0.6.2-7.3_libffcall1:latest
+      -
+        name: Build and push kforth32
+        uses: docker/build-push-action@v2
+        with:
+          context: ./kforth32
+          push: true
+          tags: rundockerforth/kforth32:latest
+      -
+        name: Build and push kforth64
+        uses: docker/build-push-action@v2
+        with:
+          context: ./kforth64
+          push: true
+          tags: rundockerforth/kforth64:latest
+      -
+        name: Build and push lina32
+        uses: docker/build-push-action@v2
+        with:
+          context: ./lina32
+          push: true
+          tags: rundockerforth/lina32:latest
+      -
+        name: Build and push lina64
+        uses: docker/build-push-action@v2
+        with:
+          context: ./lina64
+          push: true
+          tags: rundockerforth/lina64:latest
+      -
+        name: Build and push minforth1.5
+        uses: docker/build-push-action@v2
+        with:
+          context: ./minforth1.5
+          push: true
+          tags: rundockerforth/minforth1.5:latest
+      -
+        name: Build and push minforth3.4
+        uses: docker/build-push-action@v2
+        with:
+          context: ./minforth3.4
+          push: true
+          tags: rundockerforth/minforth3.4:latest
+      -
+        name: Build and push muforth
+        uses: docker/build-push-action@v2
+        with:
+          context: ./muforth
+          push: true
+          tags: rundockerforth/muforth:latest
+      -
+        name: Build and push pfe
+        uses: docker/build-push-action@v2
+        with:
+          context: ./pfe
+          push: true
+          tags: rundockerforth/pfe:latest
+      -
+        name: Build and push pforth
+        uses: docker/build-push-action@v2
+        with:
+          context: ./pforth
+          push: true
+          tags: rundockerforth/pforth:latest
+      -
+        name: Build and push sf-forth
+        uses: docker/build-push-action@v2
+        with:
+          context: ./sf-forth
+          push: true
+          tags: rundockerforth/sf-forth:latest
+      -
         name: Build and push ueforth
         uses: docker/build-push-action@v2
         with:
           context: ./ueforth
           push: true
           tags: rundockerforth/ueforth:latest
-
