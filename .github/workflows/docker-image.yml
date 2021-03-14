@@ -149,3 +149,10 @@ jobs:
           context: ./ueforth
           push: true
           tags: rundockerforth/ueforth:latest
+      -
+        name: Build and push mecrisp-stellaris
+        uses: docker/build-push-action@v2
+        with:
+          context: ./mecrisp-stellaris
+          push: true
+          tags: rundockerforth/mecrisp-stellaris:latest
