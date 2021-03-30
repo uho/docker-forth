@@ -24,6 +24,9 @@ and
 - [cforth](./cforth)  
   Forth in C by Mitch Bradly, https://github.com/MitchBradley/cforth 
 
+- [figforth32](./figforth32)  
+  32 Bit FIG-Forth for Linux by Albert van der Horst, https://home.hccnet.nl/a.w.m.van.der.horst/figforth.html  
+
 - [flk](./flk)  
   Optimizing native code compiler targeted for the Intel 386+ CPU by Lars Krueger, mirror at https://github.com/uho/flk
 
