@@ -1,4 +1,4 @@
-FROM debian:buster 
+FROM debian:bullseye-slim 
 RUN mkdir /src
 VOLUME /src
 WORKDIR /src
