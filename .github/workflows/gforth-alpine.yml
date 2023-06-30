@@ -28,7 +28,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push gforth-current
+        name: Build and push gforth-alpine
         uses: docker/build-push-action@v2
         with:
           context: ./gforth-alpine
