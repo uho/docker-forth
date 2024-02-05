@@ -5,11 +5,11 @@ RUN apt-get update -q \
      apt-get install -qy wget sudo libc6-i386 lib32stdc++6 \
   && apt-get clean \
   && rm -rf /var/lib/apt
-RUN wget https://www.mpeforth.com/arena/vfxforth-eval-lin-x86.tar.gz \
-  && tar xfz vfxforth-eval-lin-x86.tar.gz
-WORKDIR /VfxLinEval
+RUN wget https://vfxforth.com/downloads/VfxCommunity/VfxForth_x86_lin.tar.gz \
+  && tar xfz VfxForth_x86_lin.tar.gz
+WORKDIR /VfxForthLin
 RUN echo bye | ./InstallMe.Lin32.sh
 RUN mkdir /src
 VOLUME /src
 WORKDIR /src
-ENTRYPOINT ["/VfxLinEval/Bin/vfxlin"]
+ENTRYPOINT ["/VfxForthLin/Bin/x386Lin"]
