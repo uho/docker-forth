@@ -1,0 +1,21 @@
+{
+    "name": "Forth Project",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+				"fttx.language-forth"
+			]
+        },
+        "settings": { 
+            "terminal.integrated.shell.linux": "/bin/bash",
+            "git.enabled": true,
+            "git.autofetch": true,
+            "git.confirmSync": false
+        }
+    }
+}
+
